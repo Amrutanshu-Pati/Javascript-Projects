@@ -3,30 +3,30 @@ const quoteText = document.getElementById("quote");
 const quoteAuthor = document.getElementById("author");
 
 let apiQuotes = [];
-let quotesInApi=[];
+let quotesInApi = [];
 // get Quotes from api
-async function getQuotes() {
-  const apiUrl = "https://type.fit/api/quotes";
-  // const apiUrl = "https://goquotes-api.herokuapp.com/api/v1/all/quotes";
-  let response = await fetch(apiUrl);
-  apiQuotes = await response.json();
-  // console.log(apiQuotes);
-  // console.log(typeof apiQuotes);
-  // console.log(apiQuotes.quotes);
-  // console.log(apiQuotes.quotes[200].text);
-  // quotesInApi=apiQuotes.quotes;
-  // console.log(quotesInApi);
-  // let quotes = quotesInApi[Math.floor(Math.random() * quotesInApi.length)];
-  // console.log(`Quote: ${quotes.text}`);
-  // console.log(`Author: ${quotes.author}`);
-  newQuote();
-}
+// async function getQuotes() {
+//   const apiUrl = "https://type.fit/api/quotes";
+//   // const apiUrl = "https://goquotes-api.herokuapp.com/api/v1/all/quotes";
+//   let response = await fetch(apiUrl);
+//   apiQuotes = await response.json();
+//   // console.log(apiQuotes);
+//   // console.log(typeof apiQuotes);
+//   // console.log(apiQuotes.quotes);
+//   // console.log(apiQuotes.quotes[200].text);
+//   // quotesInApi=apiQuotes.quotes;
+//   // console.log(quotesInApi);
+//   // let quotes = quotesInApi[Math.floor(Math.random() * quotesInApi.length)];
+//   // console.log(`Quote: ${quotes.text}`);
+//   // console.log(`Author: ${quotes.author}`);
+//   newQuote();
+// }
 
 //Show New Quotes
 function newQuote() {
-  // const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
+  const quote = localQuotes[Math.floor(Math.random() * localQuotes.length)];
   // const quote = quotesInApi[Math.floor(Math.random() * quotesInApi.length)];
-  const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+  // const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   //   console.log(quote);
   // check quote length
   if (quote.text.length > 50) {
@@ -44,5 +44,5 @@ function newQuote() {
 }
 
 // on load
-getQuotes();
+// getQuotes();
 newQuote();
