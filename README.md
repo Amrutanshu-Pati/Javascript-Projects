@@ -1,1 +1,1 @@
-# Javascript-Projects
+# Quote-generator
